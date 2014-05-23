@@ -1,12 +1,14 @@
-freistuz-latex
+# freistuz-latex
 ===
 LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.
 
-Handhabung
+### Handhabung
 ----
-Zur Verwendung mit XeLaTeX2e
+Zur Verwendung mit XeLaTeX2e. Zwecks Installation der Klassendatei bitte bislang das Internet konsultieren, z.B. Google: "Install custom LaTeX class"  
 
-Grundlagen
+
+
+##### Grundlagen
 ----
 Die grundlagigsten Befehle:
 
@@ -14,12 +16,12 @@ Die grundlagigsten Befehle:
 * Artikelueberschrift `section{Ein Artikel}`
 * Artikelüberschrift Untertitel `sectionsubtitle{Artikelunterschrift}`
 
-Weitere Befehle
+##### Weitere Befehle
 ----
 Normales LaTeX-Markup.
 
-Release Notes
+### Release Notes
 ----
-Version 0.0 (nullkommanull)
-Autor: Moritz Hoffmann
+Version 0.0 (nullkommanull)   
+Autor: Moritz Hoffmann    
 Datum: 23. Mai 2014
