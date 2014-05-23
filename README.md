@@ -1,4 +1,4 @@
-# freistuz-latex
+# freistuz-latex   
 
 LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.
 ----
