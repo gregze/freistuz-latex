@@ -1,4 +1,5 @@
 # freistuz-latex
+
 LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.
 ----
 ### Handhabung
