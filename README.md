@@ -7,6 +7,7 @@ LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.
 Zur Verwendung mit XeLaTeX2e. Zwecks Installation der Klassendatei bitte bislang das Internet konsultieren, z.B. Google: "Install custom LaTeX class"  
 
 #### Grundlagen
+Dokumentenklasse: `freistuz`. Diese stellt das Layout bereit.   
 Die grundlagigsten Befehle:
 
 * Abschnitt (Politik, Kultur, ...) `chapter{Abschnittname}` (erzeugt keine Ausgabe, erscheint nur im Rubrikon)
@@ -15,6 +16,18 @@ Die grundlagigsten Befehle:
 
 #### Weitere Befehle
 Normales LaTeX-Markup.
+
+#### Minimalbeispiel
+
+	\documentclass{freistuz}
+	
+	\begin{document}
+		\section{Ukraine-Krise}
+		\sectionsubtitle{Neues aus dem Osten}
+		Lorem Ipsum dolor sit amet...
+	\end{document}
+	
+
 ----
 ### Release Notes
 Version 0.0 (nullkommanull)   
