@@ -14,9 +14,9 @@ Abhaengigkeiten:
 Dokumentenklasse: `freistuz`. Diese stellt das Layout bereit.   
 Die grundlagigsten Befehle:
 
-* Abschnitt (Politik, Kultur, etc.) `\chapter{Abschnittname}` (erzeugt keine Ausgabe, erscheint nur im Rubrikon)
-* Artikelueberschrift `\section{Ein Artikel}`
-* Artikelueberschrift Untertitel `\sectionsubtitle{Artikelunterschrift}`
+* `\chapter{Abschnittname}`  Abschnitt (Politik, Kultur, etc., (erzeugt keine Ausgabe, erscheint *spaeter* nur im Rubrikon)
+* `\section{Ein Artikel}` Artikelueberschrift
+* `\sectionsubtitle{Artikelunterschrift}`  Artikelueberschrift Untertitel
 
 ### Weitere Befehle
 Normales LaTeX-Markup.

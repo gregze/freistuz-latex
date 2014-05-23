@@ -32,22 +32,27 @@
 \setmainfont{DejaVu Sans}
 %
 % Font für Artikelueberschriften
-% \providecommand...
+\newfontfamily\SectionFont[Contextuals={WordInitial,WordFinal}]{Ubuntu}
 %
 % ======================================
 % STYLE DEFINITIONS
 % ======================================
 % Aussehen und Stile ab hier
+%
+% PARAGRAPH
 % Normaler Style fuer Fliesstext
 \providecommand{\StyleNormal}{\normalsize\normalfont}
-% Style fuer Subtitel von Artikelueberschriften
-\providecommand{\StyleSectionSubtitle}{\it}
 %
+% SECTION
 % Bündigkeit der Artikelüberschriften
 \providecommand{\justifyheading}{\raggedleft}
+% Artikelueberschriften
+\providecommand{\StyleSection}{\SectionFont\Large\bfseries\justifyheading}
+% Subtitel von Artikelueberschriften
+\providecommand{\StyleSectionSubtitle}{\SectionFont\Large}
 %
 % ======================================
-% SECTION DEFINITIONS
+% COMMAND DEFINITIONS
 % ======================================
 % Article title subtitle
 \providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal}
@@ -60,7 +65,7 @@
 % % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 %
 % Format sections
-\titleformat{\section}[display]{\bfseries\justifyheading}{\thesection}{0em}{}{}
+\titleformat{\section}[display]{}{\thesection}{0em}{\StyleSection}{\StyleNormal}
 \titleformat{\subsection}[block]{\bfseries}{}{0em}{}{}
 %
 % "Disable" Counter
