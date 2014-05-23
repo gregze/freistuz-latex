@@ -8,6 +8,7 @@ Zur Verwendung mit XeLaTeX2e. Zwecks Installation der Klassendatei bitte bislang
 Abhaengigkeiten:
 * `titlesec`
 * `fontspec`
+* `multicol`
 
 
 ### Grundlagen
