@@ -1,5 +1,5 @@
 freistuz-latex
 ===
-LaTeX-Klasse fŸr die neue Studierendenzeitung freistuz.
+LaTeX-Klasse fuerr die neue Studierendenzeitung freistuz.
 
 Mai 2014
