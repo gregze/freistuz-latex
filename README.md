@@ -6,12 +6,12 @@ Handhabung
 ----
 Zur Verwendung mit XeLaTeX2e
 
-Grundlagen:
+Grundlagen
 ----
 Die grundlagigsten Befehle:
 
 * Abschnitt (Politik, Kultur, ...) `chapter{Abschnittname}` (erzeugt keine Ausgabe, erscheint nur im Rubrikon)
-* Artikelüberschrift `section{Ein Artikel}`
+* Artikelueberschrift `section{Ein Artikel}`
 * Artikelüberschrift Untertitel `sectionsubtitle{Artikelunterschrift}`
 
 Weitere Befehle
