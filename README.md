@@ -1,6 +1,7 @@
 # freistuz-latex   
 
-LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.
+LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.   
+
 ----
 ### Handhabung
 Zur Verwendung mit XeLaTeX2e. Zwecks Installation der Klassendatei bitte bislang das Internet konsultieren, z.B. Google: "Install custom LaTeX class"  
