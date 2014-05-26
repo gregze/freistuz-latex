@@ -4,7 +4,8 @@
 % LaTeX Klasse fuer die Studierendenzeitung freistuz
 % Fuer die Benutzung mit XeLaTeX
 %
-% Autor: Moritz Hoffmann
+% Autoren: Moritz Hoffmann, 
+%          David "the Dude" Feeney
 % Datum: 23. Mai 2014
 %
 % ======================================
@@ -26,6 +27,12 @@
 \usepackage{titlesec}
 % Multicol fuer zweispaltiges Layout
 \usepackage{multicol}
+% Zum Bilder einbinden
+\usepackage{graphicx}
+% Fuer If Abfragen
+\usepackage{ifthen}
+% Fuer FloatBarrier
+\usepackage {placeins}
 %
 % ======================================
 % FONT DEFINITIONS
@@ -76,3 +83,30 @@
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
 %
+% ======================================
+% PICTURES
+% ======================================
+%
+% Bild einbinden
+% \bild{<spalten>}{<quelle>}{<untertitel>}{<dx>}{<dy>}
+\providecommand{\bild}[5]{%
+	\ifthenelse{#1=1}{%
+		% Einspaltiges Bild
+		\begin{center}
+			\rule{4cm}{2cm}
+		%	\caption{#3}
+		\end{center}
+	}
+	{
+		% Zweispaltiges Bild
+		\end{multicols}
+		\FloatBarrier
+		\begin{figure}[thp]
+			\centering
+			\rule{8cm}{2cm}
+			\caption{#3}
+		\end{figure}
+		\FloatBarrier
+		\begin{multicols}{2}
+	}
+}
