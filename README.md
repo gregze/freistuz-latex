@@ -20,6 +20,13 @@ Die grundlagigsten Befehle:
 * `\sectionsubtitle{Artikelunterschrift}`  Artikelueberschrift Untertitel
 
 ### Weitere Befehle
+
+#### Bilder einbinden
+Bilder werden mildem Befehl `\bild{<spalten>}{<quelle>}{<untertitel>}[<dx>]` eingebunden. Die Parameter haben folgende Bedeutung:
+* `<spalten>` Anzahl der Spalten, die das Bild ueberspannt. Mšgliche Werte: 1 oder 2.
+* `<quelle>` Pfad zum Bild **Bei Fehlern in der Ausgabe zuerst diesen ŸberprŸfen** und dann erst den Administrator kontaktieren!
+* `<untertitel>` = Caption fuer das Bild
+
 Normales LaTeX-Markup.
 
 ### Minimalbeispiel
