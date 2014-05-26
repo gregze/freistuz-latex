@@ -88,25 +88,16 @@
 % ======================================
 %
 % Bild einbinden
-% \bild{<spalten>}{<quelle>}{<untertitel>}{<dx>}{<dy>}
-\providecommand{\bild}[5]{%
-	\ifthenelse{#1=1}{%
-		% Einspaltiges Bild
+% \bild[<dx>]{<quelle>}{<untertitel>}
+\providecommand{\bild}[3][1]{%
+	% Einspaltiges Bild
+	\begin{minipage}[t]{\linewidth}
 		\begin{center}
-			\rule{4cm}{2cm}
-		%	\caption{#3}
+			\quad\\[.6em]
+			% Bild auf \textwidth skalieren
+			\includegraphics[width=#1\linewidth]{#2}\\[1em]
+			\textit{#3}
+			%\caption{#4}
 		\end{center}
-	}
-	{
-		% Zweispaltiges Bild
-		\end{multicols}
-		\FloatBarrier
-		\begin{figure}[thp]
-			\centering
-			\rule{8cm}{2cm}
-			\caption{#3}
-		\end{figure}
-		\FloatBarrier
-		\begin{multicols}{2}
-	}
+	\end{minipage}\\[1.2em]
 }
