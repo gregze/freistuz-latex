@@ -42,6 +42,8 @@
 %
 % Font für Artikelueberschriften
 \newfontfamily\FontSection[Contextuals={WordInitial,WordFinal}]{Ubuntu}
+% Font fuer specials
+\newfontfamily\FontSpecial[Contextuals={WordInitial,WordFinal}]{Hoefler Text}
 % Setze Font für Subsections identisch
 \providecommand{\FontSubsection}{\FontSection}
 %
