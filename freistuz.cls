@@ -29,10 +29,14 @@
 \usepackage{multicol}
 % Zum Bilder einbinden
 \usepackage{graphicx}
+%
+% --------------------------------------
 % Fuer If Abfragen
-\usepackage{ifthen}
+%\usepackage{ifthen}
+% Bildunterschriften schön stylen 
+%\usepackage{caption, floatrow}
 % Fuer FloatBarrier
-\usepackage {placeins}
+%\usepackage {placeins}
 %
 % ======================================
 % FONT DEFINITIONS
@@ -51,6 +55,7 @@
 % STYLE DEFINITIONS
 % ======================================
 % Bündigkeit der Ueberschriften
+%
 \providecommand{\JustifySection}{\raggedleft}
 \providecommand{\JustifySubsection}{\centering}
 %
@@ -81,9 +86,11 @@
 \titleformat{\section}[display]{}{\thesection}{0em}{\StyleSection}{\StyleNormal}
 \titleformat{\subsection}[display]{}{}{0em}{\StyleSubsection}{\StyleNormal}
 %
-% "Disable" Counter
+% Counter ausschalten
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
+%
+%
 %
 % ======================================
 % PICTURES
