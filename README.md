@@ -22,7 +22,7 @@ Die grundlagigsten Befehle:
 ### Weitere Befehle
 
 #### Bilder einbinden
-Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}[<dx>]` eingebunden. Die Parameter haben folgende Bedeutung:
+Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingebunden. Die Parameter haben folgende Bedeutung:
 * `<skalierung>` (optional) das Bild wird automatisch auf Zeilenbreite skaliert. Ist eine andere Skalierung gewŸnscht, so muss dies angegeben werden. Z.B. skaliert die Angabe `0.8` das Bild auf 80% der Zeilenbreite.
 * `<quelle>` Pfad zum Bild **Bei Fehlern in der Ausgabe zuerst diesen ŸberprŸfen** und dann erst den Administrator kontaktieren!
 * `<untertitel>` = Caption fuer das Bild
