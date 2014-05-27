@@ -59,7 +59,7 @@
 \providecommand{\JustifySubsection}{\centering}
 %
 % Darstellung Kapitelueberschriften
-\renewcommand{\thechapter}[1]{\chaptermark{#1}}
+\renewcommand{\chapter}[1]{\chaptermark{#1}}
 % Globale Absatzeinrueckung
 \setlength{\parindent}{0cm}
 %
