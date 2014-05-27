@@ -15,9 +15,10 @@ Abhaengigkeiten:
 Dokumentenklasse: `freistuz`. Diese stellt das Layout bereit.   
 Die grundlagigsten Befehle:
 
-* `\chapter{Abschnittname}`  Abschnitt (Politik, Kultur, etc., (erzeugt keine Ausgabe, erscheint *spaeter* nur im Rubrikon)
+* `\kapitel{Abschnittname}`  Abschnitt (Politik, Kultur, etc., (erzeugt keine Ausgabe, erscheint nur im Rubrikon)
 * `\section{Ein Artikel}` Artikelueberschrift
 * `\sectionsubtitle{Artikelunterschrift}`  Artikelueberschrift Untertitel
+* `\subsection{Unterüberschrift}` Zentrierte Zwischenueberschrift innerhalb Artikel 
 
 ### Weitere Befehle
 

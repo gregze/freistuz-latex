@@ -6,8 +6,8 @@
 %
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
-% Datum: 23. Mai 2014
-%
+% Datum: 28. Mai 2014
+% Version: 0.1
 % ======================================
 % BASIC CONFIGURATION
 % ======================================
@@ -75,32 +75,59 @@
 % Globale Absatzeinrueckung
 \setlength{\parindent}{0cm}
 % 
-% Kapitelueberschriften Darstellung ausschalten
-%\renewcommand{\chapter}[1]{%
-%	\chaptermark{#1}
-%	\addtocounter{chapter}{1}
-%}
-% Kapitel Counter setzen
-\setcounter{chapter}{1}
-%
 % Kapitelueberschriften (im Rubrikon)
-\providecommand{\StyleChapter}{\FontSection\color{stuzgreen}}
+\providecommand{\StyleChapter}{
+	\FontSection
+	\color{stuzgreen}
+}
 % Artikelueberschriften
-\providecommand{\StyleSection}{\FontSection\Huge\bfseries\JustifySection}
+\providecommand{\StyleSection}{
+	\FontSection
+	\Huge
+	\bfseries
+	\JustifySection
+	\color{black}
+}
 % Subtitel von Artikelueberschriften
-\providecommand{\StyleSectionSubtitle}{\FontSection\Huge}
+\providecommand{\StyleSectionSubtitle}{
+	\FontSection
+	\Huge
+	\color{black}
+}
 % Subsections (Zwischenueberschriften)
-\providecommand{\StyleSubsection}{\FontSection\Large\bfseries\JustifySubsection}
+\providecommand{\StyleSubsection}{
+	\FontSection
+	\Large\bfseries
+	\JustifySubsection
+	\color{black}
+}
 % Normaler Style fuer Fliesstext
-\providecommand{\StyleNormal}{\normalsize\normalfont}
+\providecommand{\StyleNormal}{
+	\normalsize
+	\normalfont
+	\color{black}
+}
 %
-\providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal}
+% ======================================
+% LAYOUT ELEMENTS
+% ======================================
 % --- LATEX SECTIONS -------------------
 % See titlesec package manual p.4: http://sunsite.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/contrib/titlesec/titlesec.pdf
 % % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 %
+% Die Chaptermark neu definieren
+\renewcommand{\chaptermark}[1]{\mark{\StyleChapter#1\StyleNormal}{}}
+% Format Kapitel
+% Counter instanzieren
+\newcounter{kapitel}
+\setcounter{kapitel}{0}
+% Kapitelueberschriften Darstellung
+\providecommand{\kapitel}[1]{%
+	\chaptermark{#1}
+	\addtocounter{kapitel}{1}
+}
+%
 % Format sections subsections subsubsections etc
-\titleformat{\chapter}[display]{}{\thechapter}{0pt}{\StyleChapter}{\StyleNormal}
 \titleformat{\section}[display]{}{\thesection}{0em}{\StyleSection}{\StyleNormal}
 \titleformat{\subsection}[display]{}{\thesubsection}{0em}{\StyleSubsection}{\StyleNormal}
 %
@@ -127,8 +154,6 @@
 % Zur Erklaerung siehe fancyhdr Doku:
 % http://ftp.uni-erlangen.de/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
 \fancyhead{}
-% Die Chaptermark neu definieren
-%%%%% \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 % Leftmark = Chaptermark anzeigen
 \fancyhead[RO,LE]{\leftmark}
 % 
@@ -160,4 +185,5 @@
 % OTHER COMMANDS
 % ======================================
 %
-% Column break
+% Section Subtitel
+\providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal}
