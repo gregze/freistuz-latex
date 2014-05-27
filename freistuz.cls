@@ -59,8 +59,9 @@
 \providecommand{\JustifySection}{\raggedleft}
 \providecommand{\JustifySubsection}{\centering}
 %
-% Generelle Absatzeinrueckung
-% 
+% Globale Absatzeinrueckung
+\setlength{\parindent}{0cm}
+%
 % Normaler Style fuer Fliesstext
 \providecommand{\StyleNormal}{\normalsize\normalfont}
 % Artikelueberschriften
@@ -83,8 +84,9 @@
 % % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 %
 % Format sections subsections subsubsections etc
+\titleformat{\chapter}[display]{}{\thechapter}{0pt}{}{}
 \titleformat{\section}[display]{}{\thesection}{0em}{\StyleSection}{\StyleNormal}
-\titleformat{\subsection}[display]{}{}{0em}{\StyleSubsection}{\StyleNormal}
+\titleformat{\subsection}[display]{}{\thesubsection}{0em}{\StyleSubsection}{\StyleNormal}
 %
 % Counter ausschalten
 \renewcommand{\thesection}{}
