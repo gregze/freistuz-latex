@@ -55,10 +55,11 @@
 % STYLE DEFINITIONS
 % ======================================
 % Bündigkeit der Ueberschriften
-%
 \providecommand{\JustifySection}{\raggedleft}
 \providecommand{\JustifySubsection}{\centering}
 %
+% Darstellung Kapitelueberschriften
+\renewcommand{\thechapter}[1]{\chaptermark{#1}}
 % Globale Absatzeinrueckung
 \setlength{\parindent}{0cm}
 %
@@ -78,7 +79,6 @@
 % --- EIGENE ELEMENTE ------------------
 % Article title subtitle
 \providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal}
-%
 % --- LATEX SECTIONS -------------------
 % See titlesec package manual p.4: http://sunsite.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/contrib/titlesec/titlesec.pdf
 % % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
