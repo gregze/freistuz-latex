@@ -48,6 +48,6 @@ Normales LaTeX-Markup.
 	\end{document}
 	
 ## Release Notes
-Version 0.1 (nullkommaeins)   
+Version 0.2 (nullkomma-zwei)   
 Autor: Moritz Hoffmann    
 Datum: 23. Mai 2014

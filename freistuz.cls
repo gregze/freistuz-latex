@@ -7,20 +7,41 @@
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
 % Datum: 28. Mai 2014
-% Version: 0.1
+% Version: 0.2
 % ======================================
 % BASIC CONFIGURATION
 % ======================================
 % KOMA-Script als Grundlage
-\LoadClass{scrreprt}
+\LoadClass{scrbook}
 % Benoetigtes Tex Format angeben
 \NeedsTeXFormat{LaTeX2e}
 % Klassenbeschreibung und -name
 \ProvidesClass{freistuz}[23/05/2014 - LaTex-Klasse fuer freie Studierendenzeitung Freiburg]
 %
+% Geometry Einstellungen
+\newlength{\randoben}
+\newlength{\randunten}
+\newlength{\randseite}
+
+\setlength{\randseite}{2cm}
+\setlength{\randoben}{3.2cm}
+\setlength{\randunten}{3.2cm}
+
+
+
 % ======================================
 % REQUIRED PACKAGES
 % ======================================
+%
+% Beschnitt und Seitenraender
+\usepackage[%
+	% Die Parameter
+	twoside,
+	left=\randseite,
+	top=\randoben,
+	bottom=\randunten
+]{geometry}
+%
 % Fontspec package to customize fonts
 \usepackage{fontspec}
 % Titlesec package to customize titles
@@ -35,8 +56,6 @@
 \usepackage{color}
 % Paket zur absoluten Textpositionierung
 \usepackage{textpos}
-% Beschnitt und Seitenraender
-\usepackage[a4paper]{geometry}
 %
 % --------------------------------------
 %
@@ -120,15 +139,21 @@
 % % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 %
 % Die Chaptermark neu definieren
-\renewcommand{\chaptermark}[1]{\mark{\StyleChapter#1\StyleNormal}{}}
+%\renewcommand{\chaptermark}[1]{\markboth{\StyleChapter#1\StyleNormal}{}}
+%\renewcommand{\chaptermark}[1]{\markboth{\chaptername}{}} 
+%
+%\makeatletter
+%\renewcommand*{\rightmark}[1]{\thechapter #1}{}%
+%\makeatother
+%
 % Format Kapitel
 % Counter instanzieren
 \newcounter{kapitel}
 \setcounter{kapitel}{0}
 % Kapitelueberschriften Darstellung
 \providecommand{\kapitel}[1]{%
-	\chaptermark{#1}
-	\addtocounter{kapitel}{1}
+%	\set\kapitel{#1}
+%	\addtocounter{kapitel}{1}
 }
 %
 % Format sections subsections subsubsections etc
@@ -150,6 +175,10 @@
 }
 \makeatother 
 %
+% multicol tweaking
+\setlength{\columnsep}{0.8cm}
+\setlength{\columnseprule}{.4pt}
+%
 % ======================================
 % TABLE OF CONTENTS
 % ======================================
@@ -161,21 +190,25 @@
 % ======================================
 % HEADER/FOOTER
 % ======================================
-% Header/footer Einschalten
-\pagestyle{fancy}
 % 
 % Die Seiten stylen
 % Zur Erklaerung siehe fancyhdr Doku:
 % http://ftp.uni-erlangen.de/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+\fancypagestyle{plain}{%
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[LO, RE]{\slshape \rightmark}
-\fancyfoot[LO]{\thepage | freistuz | Juni 2014}
-\fancyfoot[LO]{Juni 2014 | freistuz | \thepage}
+\fancyhead[LO, RE]{\thechapter}
+\fancyfoot[LO, RE]{\thepage}
+%
+% Für die ueberstylten Fussnoten
+% \fancyfoot[RE]{Juni 2014 | freistuz | \thepage}
 % 
 % Die Ruler weg
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+}
+% Header/footer Einschalten
+\pagestyle{plain}
 %
 %
 % ======================================
