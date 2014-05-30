@@ -40,10 +40,11 @@
 % REQUIRED PACKAGES
 % ======================================
 %
-% Fontencoding
+% Babel-Paket
 \usepackage[ngerman]{babel}
 % Inputencoding
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}  % Schoen alles deutsch
+\usepackage[T1]{fontenc}		% Font-Kodierung
 % Beschnitt und Seitenraender
 \usepackage[%
 	% Die Parameter
