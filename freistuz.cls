@@ -6,8 +6,8 @@
 %
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
-% Datum: 30. Mai 2014
-% Version: 0.3b
+% Datum: 31. Mai 2014
+% Version: 0.3c
 %
 % KEY FEATURES:
 % .TOC-HACK
@@ -65,13 +65,13 @@
 \usepackage{fancyhdr}
 % Paint me stuzgreen :-)
 \usepackage{color}
-% Paket zur absoluten Textpositionierung
-\usepackage[absolute]{textpos}
 %
 % --------------------------------------
 %
 % Blindtext
 \usepackage{blindtext}
+% Paket zur absoluten Textpositionierung
+%\usepackage[]{textpos}
 % Fuer If Abfragen
 %\usepackage{ifthen}
 % Bildunterschriften schön stylen 
@@ -249,7 +249,7 @@
 % GRID/TEXTPOS - WERBUNG
 % ======================================
 %
-\TPGrid{2}{2}
+%\TPGrid{2}{2}
 %
 % ======================================
 % OTHER COMMANDS

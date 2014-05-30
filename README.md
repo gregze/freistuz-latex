@@ -36,7 +36,8 @@ Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingeb
 * `<untertitel>` = Caption fuer das Bild
 
 #### Werbung einbinden
-Experimentelles Feature, benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblock}{1}(<x>,<y>)` wobei `x` und `y` für die Position auf der Seite stehen. also
+Experimentelles Feature, **wird in der aktuellen Version nicht unterstuetzt**
+benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblock}{1}(<x>,<y>)` wobei `x` und `y` für die Position auf der Seite stehen. also
 
 	(x,y)	| Position
 	======================
@@ -63,6 +64,6 @@ Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befe
 	\end{document}
 	
 ## Release Notes
-Version 0.3 b
+Version 0.3c
 Autor: Moritz Hoffmann    
 Datum: 30. Mai 2014
