@@ -51,6 +51,6 @@ Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befe
 	\end{document}
 	
 ## Release Notes
-Version 0.2 (nullkomma-zwei)   
+Version 0.3 (nullkomma-drei)   
 Autor: Moritz Hoffmann    
-Datum: 23. Mai 2014
+Datum: 30. Mai 2014
