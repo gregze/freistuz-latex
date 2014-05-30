@@ -138,6 +138,16 @@
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
 %
+% Subsection Einzug
+\makeatletter
+\renewcommand\subsection{\@startsection
+   {subsection}{2}{0mm}%      		% Name, Ebene, Einzug
+   {.4\baselineskip}%            	% Vor-Abstand
+   {.4\baselineskip}%            	% Nach-Abstand
+   {\StyleSubsection}%   				% Layout
+}
+\makeatother 
+%
 % ======================================
 % TABLE OF CONTENTS
 % ======================================
@@ -157,7 +167,7 @@
 % http://ftp.uni-erlangen.de/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
 \fancyhead{}
 % Leftmark = Chaptermark anzeigen
-\fancyhead[RO,LE]{\leftmark}
+\fancyhead[LO]{\leftmark}
 % 
 % Die Ruler weg
 \renewcommand{\headrulewidth}{0pt}
@@ -188,4 +198,4 @@
 % ======================================
 %
 % Section Subtitel
-\providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal}
+\providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal\\}
