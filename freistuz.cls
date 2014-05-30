@@ -6,13 +6,19 @@
 %
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
-% Datum: 28. Mai 2014
-% Version: 0.2
+% Datum: 30. Mai 2014 -- 23h30
+% Version: 0.3
+%
+% KEY FEATURES:
+% .TOC-HACK
+% \renewcommand{\contentsname}{Inhalt} muss in .tex-Datei
+% stehen, sonst Inhaltsverzeichnis verbuggt.
+%
 % ======================================
 % BASIC CONFIGURATION
 % ======================================
-% KOMA-Script als Grundlage
-\LoadClass{scrbook}
+% Standardklasse als Grundlage
+\LoadClass{book}
 % Benoetigtes Tex Format angeben
 \NeedsTeXFormat{LaTeX2e}
 % Klassenbeschreibung und -name
@@ -22,17 +28,22 @@
 \newlength{\randoben}
 \newlength{\randunten}
 \newlength{\randseite}
-
+%
 \setlength{\randseite}{2cm}
 \setlength{\randoben}{3.2cm}
 \setlength{\randunten}{3.2cm}
-
-
-
+%
+% Ausgabe
+\providecommand{\Ausgabe}{Juni 2014}
+%
 % ======================================
 % REQUIRED PACKAGES
 % ======================================
 %
+% Fontencoding
+\usepackage[ngerman]{babel}
+% Inputencoding
+\usepackage[utf8]{inputenc}
 % Beschnitt und Seitenraender
 \usepackage[%
 	% Die Parameter
@@ -101,6 +112,7 @@
 % Kapitelueberschriften (im Rubrikon)
 \providecommand{\StyleChapter}{
 	\FontSection
+	\bfseries
 	\color{stuzgreen}
 }
 % Artikelueberschriften
@@ -151,9 +163,10 @@
 \newcounter{kapitel}
 \setcounter{kapitel}{0}
 % Kapitelueberschriften Darstellung
+\newcommand{\kapitelmark}[1]{\StyleChapter#1\StyleNormal}
 \providecommand{\kapitel}[1]{%
-%	\set\kapitel{#1}
-%	\addtocounter{kapitel}{1}
+	\renewcommand{\kapitelmark}{\StyleChapter#1\StyleNormal}
+	\addtocounter{kapitel}{1}
 }
 %
 % Format sections subsections subsubsections etc
@@ -183,9 +196,10 @@
 % TABLE OF CONTENTS
 % ======================================
 %
-% WORK IN PROGRESS
-% \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
-% \setcounter{tocdepth}{1}
+% HACK = FEATURE
+% \renewcommand{\contentsname}{Inhalt}
+% Nur Sections im Toc anzeigen
+\setcounter{tocdepth}{1}
 %
 % ======================================
 % HEADER/FOOTER
@@ -197,7 +211,8 @@
 \fancypagestyle{plain}{%
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[LO, RE]{\thechapter}
+\fancyhead[LO, RE]{\kapitelmark}
+\fancyhead[RO, LE]{}
 \fancyfoot[LO, RE]{\thepage}
 %
 % Für die ueberstylten Fussnoten

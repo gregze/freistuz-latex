@@ -37,6 +37,9 @@ Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingeb
 
 Normales LaTeX-Markup.
 
+#### Inhaltsverzeichnis
+Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befehl `\renewcommand{\contentsname}{Inhalt}` in die Präambel des `.tex`-Dokument geschrieben werden.
+
 ### Minimalbeispiel
 
 	\documentclass{freistuz}
