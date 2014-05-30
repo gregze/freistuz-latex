@@ -35,6 +35,8 @@
 \usepackage{color}
 % Paket zur absoluten Textpositionierung
 \usepackage{textpos}
+% Beschnitt und Seitenraender
+\usepackage[a4paper]{geometry}
 %
 % --------------------------------------
 %
@@ -166,8 +168,10 @@
 % Zur Erklaerung siehe fancyhdr Doku:
 % http://ftp.uni-erlangen.de/mirrors/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
 \fancyhead{}
-% Leftmark = Chaptermark anzeigen
-\fancyhead[LO]{\leftmark}
+\fancyfoot{}
+\fancyhead[LO, RE]{\slshape \rightmark}
+\fancyfoot[LO]{\thepage | freistuz | Juni 2014}
+\fancyfoot[LO]{Juni 2014 | freistuz | \thepage}
 % 
 % Die Ruler weg
 \renewcommand{\headrulewidth}{0pt}
@@ -198,4 +202,8 @@
 % ======================================
 %
 % Section Subtitel
-\providecommand{\sectionsubtitle}[1]{\StyleSectionSubtitle\hfill#1\StyleNormal\\}
+\providecommand{\sectionsubtitle}[1]{%
+	\begin{flushright}
+		\StyleSectionSubtitle#1\StyleNormal
+	\end{flushright}
+}
