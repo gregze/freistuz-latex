@@ -36,8 +36,10 @@ Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingeb
 * `<untertitel>` = Caption fuer das Bild
 
 #### Werbung einbinden
-Experimentelles Feature, **wird in der aktuellen Version nicht unterstuetzt**
-benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblock}{1}(<x>,<y>)` wobei `x` und `y` für die Position auf der Seite stehen. also
+Experimentelles Feature
+
+##### Viertelseitige Werbung
+Bitte mit dem `\bild...`-Befehl einbinden. Alternativ benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblock}{1}(<x>,<y>)` wobei `x` und `y` für die Position auf der Seite stehen. also
 
 	(x,y)	| Position
 	======================
@@ -47,6 +49,16 @@ benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblo
 	(1,1) | Rechts unten
 
 Dann innerhalb des Textblock ein `\bild{<pfad>}{}` einbinden (ohne Beschreibung). Halbseitige Werbung durch einbinden der Grafik in der linken Spalte unter Angabe von `2` als Skalierung, also `\bild[2]{<pfad>}{}`.
+
+##### Ganzseitige Werbung
+Code Block (ausserhalb der `multicols`-Umgebung!):
+
+	\newpage
+	\begin{textblock}{1}(0,0)
+	\vspace{-2.2mm}
+	\bild[2]{<werbung.jpg>}{}
+	\end{textblock}
+	\newpage\quad\newpage
 
 #### Normales LaTeX-Markup.
 

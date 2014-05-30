@@ -65,13 +65,13 @@
 \usepackage{fancyhdr}
 % Paint me stuzgreen :-)
 \usepackage{color}
+% Paket zur absoluten Textpositionierung
+\usepackage[absolute,overlay]{textpos}
 %
 % --------------------------------------
 %
 % Blindtext
 \usepackage{blindtext}
-% Paket zur absoluten Textpositionierung
-%\usepackage[]{textpos}
 % Fuer If Abfragen
 %\usepackage{ifthen}
 % Bildunterschriften schön stylen 
@@ -197,7 +197,7 @@
 % ======================================
 %
 % HACK = FEATURE
-% \renewcommand{\contentsname}{Inhalt}
+% \renewcommand{\contentsname}{Inhalt} soll innerhalb von document-umgebung stehen!
 % Nur Sections im Toc anzeigen
 \setcounter{tocdepth}{1}
 %
@@ -249,7 +249,7 @@
 % GRID/TEXTPOS - WERBUNG
 % ======================================
 %
-%\TPGrid{2}{2}
+\TPGrid{2}{2}
 %
 % ======================================
 % OTHER COMMANDS
