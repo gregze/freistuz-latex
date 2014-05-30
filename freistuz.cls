@@ -33,6 +33,8 @@
 \usepackage{fancyhdr}
 % Paint me stuzgreen :-)
 \usepackage{color}
+% Paket zur absoluten Textpositionierung
+\usepackage{textpos}
 %
 % --------------------------------------
 %

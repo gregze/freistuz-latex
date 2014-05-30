@@ -10,7 +10,6 @@ Abhaengigkeiten:
 * `fontspec`
 * `multicol`
 
-
 ### Grundlagen
 Dokumentenklasse: `freistuz`. Diese stellt das Layout bereit.   
 Die grundlagigsten Befehle:
@@ -18,14 +17,22 @@ Die grundlagigsten Befehle:
 * `\kapitel{Abschnittname}`  Abschnitt (Politik, Kultur, etc., (erzeugt keine Ausgabe, erscheint nur im Rubrikon)
 * `\section{Ein Artikel}` Artikelueberschrift
 * `\sectionsubtitle{Artikelunterschrift}`  Artikelueberschrift Untertitel
-* `\subsection{Unter웑erschrift}` Zentrierte Zwischenueberschrift innerhalb Artikel 
+* `\subsection{Unter혺berschrift}` Zentrierte Zwischenueberschrift innerhalb Artikel 
 
 ### Weitere Befehle
 
+#### Spalten
+Umgebung f체r `N` Spalten: 
+	
+	\begin{multicols}{N}
+		Dieser Text wird zweispaltig gesetzt...
+	\end{multicols}
+	Dieser Text ist wieder einspaltig...
+
 #### Bilder einbinden
 Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingebunden. Die Parameter haben folgende Bedeutung:
-* `<skalierung>` (optional) das Bild wird automatisch auf Zeilenbreite skaliert. Ist eine andere Skalierung gew웢scht, so muss dies angegeben werden. Z.B. skaliert die Angabe `0.8` das Bild auf 80% der Zeilenbreite.
-* `<quelle>` Pfad zum Bild **Bei Fehlern in der Ausgabe zuerst diesen 웑erpr웖en** und dann erst den Administrator kontaktieren!
+* `<skalierung>` (optional) das Bild wird automatisch auf Zeilenbreite skaliert. Ist eine andere Skalierung gew혺nscht, so muss dies angegeben werden. Z.B. skaliert die Angabe `0.8` das Bild auf 80% der Zeilenbreite.
+* `<quelle>` Pfad zum Bild **Bei Fehlern in der Ausgabe zuerst diesen 혺berpr혺fen** und dann erst den Administrator kontaktieren!
 * `<untertitel>` = Caption fuer das Bild
 
 Normales LaTeX-Markup.
@@ -41,6 +48,6 @@ Normales LaTeX-Markup.
 	\end{document}
 	
 ## Release Notes
-Version 0.0 (nullkommanull)   
+Version 0.1 (nullkommaeins)   
 Autor: Moritz Hoffmann    
 Datum: 23. Mai 2014
