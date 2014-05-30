@@ -35,7 +35,19 @@ Bilder werden mildem Befehl `\bild[<skalierung>]{<quelle>}{<untertitel>}` eingeb
 * `<quelle>` Pfad zum Bild **Bei Fehlern in der Ausgabe zuerst diesen berprfen** und dann erst den Administrator kontaktieren!
 * `<untertitel>` = Caption fuer das Bild
 
-Normales LaTeX-Markup.
+#### Werbung einbinden
+Experimentelles Feature, benutzt das `textpos`-Paket. Werbung viertelseitig einbinden mit `\begin{textblock}{1}(<x>,<y>)` wobei `x` und `y` für die Position auf der Seite stehen. also
+
+	(x,y)	| Position
+	======================
+	(0,0)	| Links oben
+	(1,0)	| Rechts oben
+	(0,1)	| Links unten
+	(1,1) | Rechts unten
+
+Dann innerhalb des Textblock ein `\bild{<pfad>}{}` einbinden (ohne Beschreibung). Halbseitige Werbung durch einbinden der Grafik in der linken Spalte unter Angabe von `2` als Skalierung, also `\bild[2]{<pfad>}{}`.
+
+#### Normales LaTeX-Markup.
 
 #### Inhaltsverzeichnis
 Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befehl `\renewcommand{\contentsname}{Inhalt}` in die Präambel des `.tex`-Dokument geschrieben werden.
@@ -51,6 +63,6 @@ Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befe
 	\end{document}
 	
 ## Release Notes
-Version 0.3 (nullkomma-drei)   
+Version 0.3 b
 Autor: Moritz Hoffmann    
 Datum: 30. Mai 2014

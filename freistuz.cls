@@ -6,8 +6,8 @@
 %
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
-% Datum: 30. Mai 2014 -- 23h30
-% Version: 0.3
+% Datum: 30. Mai 2014
+% Version: 0.3b
 %
 % KEY FEATURES:
 % .TOC-HACK
@@ -42,9 +42,8 @@
 %
 % Babel-Paket
 \usepackage[ngerman]{babel}
-% Inputencoding
-\usepackage[utf8]{inputenc}  % Schoen alles deutsch
-\usepackage[T1]{fontenc}		% Font-Kodierung
+% Font-Kodierung
+\usepackage[T1]{fontenc}
 % Beschnitt und Seitenraender
 \usepackage[%
 	% Die Parameter
@@ -67,7 +66,7 @@
 % Paint me stuzgreen :-)
 \usepackage{color}
 % Paket zur absoluten Textpositionierung
-\usepackage{textpos}
+\usepackage[absolute]{textpos}
 %
 % --------------------------------------
 %
@@ -245,6 +244,12 @@
 		\end{center}
 	\end{minipage}\\[1.2em]
 }
+%
+% ======================================
+% GRID/TEXTPOS - WERBUNG
+% ======================================
+%
+\TPGrid{2}{2}
 %
 % ======================================
 % OTHER COMMANDS
