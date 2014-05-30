@@ -64,9 +64,11 @@
 % Fuer Rubriki etc.
 \usepackage{fancyhdr}
 % Paint me stuzgreen :-)
-\usepackage{color}
+\usepackage{xcolor}
 % Paket zur absoluten Textpositionierung
 \usepackage[absolute,overlay]{textpos}
+% Paket für Kaesten
+\usepackage{framed} 
 %
 % --------------------------------------
 %
@@ -97,7 +99,10 @@
 % COLOR DEFINITIONS
 % ======================================
 %
+% Die schoenste Farbe aller Zeiten
 \definecolor{stuzgreen}{RGB}{82,180,116}
+% Fuer Kasten
+\colorlet{shadecolor}{stuzgreen} 
 %
 % ======================================
 % STYLE DEFINITIONS
