@@ -51,14 +51,10 @@ Bitte mit dem `\bild...`-Befehl einbinden. Alternativ benutzt das `textpos`-Pake
 Dann innerhalb des Textblock ein `\bild{<pfad>}{}` einbinden (ohne Beschreibung). Halbseitige Werbung durch einbinden der Grafik in der linken Spalte unter Angabe von `2` als Skalierung, also `\bild[2]{<pfad>}{}`.
 
 ##### Ganzseitige Werbung
-Code Block (ausserhalb der `multicols`-Umgebung!):
+Code Block (**Achtung:** Funktioniert nur ausserhalb der `multicols`-Umgebung!) 
 
-	\newpage
-	\begin{textblock}{1}(0,0)
-	\vspace{-2.2mm}
-	\bild[2]{<werbung.jpg>}{}
-	\end{textblock}
-	\newpage\quad\newpage
+    \xwerbung{<pfad/zum/bild.jpg>}
+
 
 #### Normales LaTeX-Markup.
 

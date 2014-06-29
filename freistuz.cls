@@ -256,6 +256,16 @@
 %
 \TPGrid{2}{2}
 %
+% Gesamte A4-Seite Werbung
+\providecommand{\xwerbung}[1]{%
+	\newpage
+	\begin{textblock}{1}(0,0)
+		\vspace{-2.2mm}
+		\bild[2]{#1}{}
+	\end{textblock}
+	\quad\newpage
+}
+%
 % ======================================
 % OTHER COMMANDS
 % ======================================
