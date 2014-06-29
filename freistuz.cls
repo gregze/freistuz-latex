@@ -194,8 +194,16 @@
 \makeatother 
 %
 % multicol tweaking
-\setlength{\columnsep}{0.8cm}
-\setlength{\columnseprule}{.4pt}
+\newcommand{\standardcolumnsep}{\setlength{\columnsep}{0.8cm}}
+\newcommand{\standardcolrule}{\setlength{\columnseprule}{.4pt}}
+\newcommand{\nocolsep}{\setlength{\columnsep}{0pt}}
+\newcommand{\nocolrule}{\setlength{\columnseprule}{0pt}}
+%
+\standardcolumnsep
+\standardcolrule
+%
+%
+%
 %
 % ======================================
 % TABLE OF CONTENTS

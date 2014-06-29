@@ -55,7 +55,6 @@ Code Block (**Achtung:** Funktioniert nur ausserhalb der `multicols`-Umgebung!)
 
     \xwerbung{<pfad/zum/bild.jpg>}
 
-
 #### Normales LaTeX-Markup.
 
 #### Inhaltsverzeichnis
