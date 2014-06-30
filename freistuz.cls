@@ -18,7 +18,7 @@
 % BASIC CONFIGURATION
 % ======================================
 % Standardklasse als Grundlage
-\LoadClass{book}
+\LoadClass[a4paper]{book}
 % Benoetigtes Tex Format angeben
 \NeedsTeXFormat{LaTeX2e}
 % Klassenbeschreibung und -name
