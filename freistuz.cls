@@ -144,6 +144,13 @@
 	\JustifySubsection
 	\color{black}
 }
+% Style für kleine Zwischenueberschriften
+\providecommand{\StyleSubsubsection}{
+	\FontSection
+	\large\bfseries
+	\JustifySubsection
+	\color{black}
+}
 % Normaler Style fuer Fliesstext
 \providecommand{\StyleNormal}{
 	\normalsize
@@ -185,6 +192,8 @@
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+%
 %
 % Subsection Einzug
 \makeatletter
@@ -196,6 +205,16 @@
 }
 \makeatother 
 %
+% Subsubsection Style
+\makeatletter
+\renewcommand\subsubsection{\@startsection
+   {subsubsection}{2}{0mm}%      	% Name, Ebene, Einzug
+   {.3\baselineskip}%            	% Vor-Abstand
+   {.3\baselineskip}%            	% Nach-Abstand
+   {\StyleSubsubsection}%   				% Layout
+}
+\makeatother 
+
 % multicol tweaking
 \newcommand{\standardcolsep}{\setlength{\columnsep}{0.8cm}}
 \newcommand{\standardcolrule}{\setlength{\columnseprule}{.4pt}}
