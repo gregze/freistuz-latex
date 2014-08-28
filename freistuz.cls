@@ -173,6 +173,9 @@
 %\renewcommand*{\rightmark}[1]{\thechapter #1}{}%
 %\makeatother
 %
+% Framed Box Padding
+\FrameSep10pt
+%
 % Format Kapitel
 % Counter instanzieren
 \newcounter{kapitel}
