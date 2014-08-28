@@ -7,7 +7,7 @@
 % Autoren: Moritz Hoffmann, 
 %          David "the Dude" Feeney
 % Datum: 31. Mai 2014
-% Version: 0.3c
+% Version: 0.4
 %
 % KEY FEATURES:
 % .TOC-HACK

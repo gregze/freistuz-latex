@@ -75,6 +75,6 @@ Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befe
 	\end{document}
 	
 ## Release Notes
-Version 0.4c
+Version 0.4
 Autor: Moritz Hoffmann    
-Datum: 30. Mai 2014
+Datum: 28. August 2014
