@@ -3,7 +3,11 @@
 LaTeX-Klasse fuer die neue Studierendenzeitung freistuz.   
 
 ## Handhabung
-Zur Verwendung mit XeLaTeX2e. Zwecks Installation der Klassendatei bitte bislang das Internet konsultieren, z.B. Google: "Install custom LaTeX class"    
+Zur Verwendung mit XeLaTeX2e. 
+Verwendung (einfach): Klassendatei in selbes Verzeichnis legen, wie die .tex Datei, dann Angabe von `\documentclass{freistuz}`
+
+**OSX:** Kopiere diese Datei in LAtex Verzeichnis, z.B. `/usr/local/texlive/2013/texmf-dist/tex/latex/`
+**Windows:**  Zwecks Installation der Klassendatei unter Windows bitte bislang das Internet konsultieren, z.B. Google: "Install custom LaTeX class"    
 
 Abhaengigkeiten:
 * `titlesec`
@@ -71,6 +75,6 @@ Damit das toc im zweispaltigen Modus nicht die Formatierung killt, muss der Befe
 	\end{document}
 	
 ## Release Notes
-Version 0.3c
+Version 0.4c
 Autor: Moritz Hoffmann    
 Datum: 30. Mai 2014
